@@ -852,8 +852,8 @@ header {
 .bannertop1{
     width: 38.656vw;
     height: 25.594vw;
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/467033008_1560619101481178_3613464416556606457_n.png?stp=dst-png_s552x414&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFD1z6TQGgwOmz41Xy1SLPtgAAE_F2Z2iiAAAT8XZnaKPklABZ1QKWPrc-j2p1W3d_6Nr_YjuS-p5ZugogLHBHC&_nc_ohc=dRr6Eboqa2wQ7kNvgG5NZMM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QGO_7VXwDPBlnugVimmWo8Fu4i6QTBKbT0rC-Z_hmBoZw&oe=677888A7");
-    margin-left: 5%;
+    background-image: url("./RESOURCES/dogsleep2.jpg");
+	margin-left: 5%;
     box-shadow: #00000056 0px 0.781vw 15px;
     background-color: #F8931D;
 }
@@ -902,8 +902,8 @@ header {
 .bannertop2{
     width: 38.656vw;
     height: 25.594vw;
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/465743579_1094663975214538_3397156887833859784_n.png?stp=dst-png_s552x414&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEQ4aS7RCzLWyUOZlQ6bBWau_YR7eBMoDK79hHt4EygMizknClx7M913jXFh-55Za6FerR_2OlfyzWNgDsVJP_y&_nc_ohc=TUoWshmMx5QQ7kNvgEwxOTY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QGn5zYbIuRmcTiJeUjapWnJnTpdNIBAfOL-UZ9B3qj4iA&oe=67787C98");
-    margin-left: 5%;
+    background-image: url("./RESOURCES/dogsleep2.jpg");
+	margin-left: 5%;
     box-shadow: #00000056 0px 0.781vw 15px;
 }
 
@@ -960,8 +960,8 @@ header {
     height: 23.188vw;
     margin-left: 5%;
     box-shadow: #00000056 0px 0.781vw 15px;
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/462646054_497113046822916_4679081322571978792_n.png?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEr601nTBBN23ryjjq3faQM1RjmsjJDDBfVGOayMkMMF2ewlHUJOU8AGuIebKy6jv6iQHx6buwTbWGFw9B5fjaN&_nc_ohc=FmbUSeO_yGgQ7kNvgG_OCGb&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QGztD7BBABkOfCzyLnEhxgKemiBwJA34YfrTRaKZdr9IQ&oe=67789910");
-    cursor: pointer;
+   background-image: url("./RESOURCES/dogsleep2.jpg");
+	cursor: pointer;
 }
 
 .bannerbot-maintext{
@@ -994,8 +994,8 @@ header {
     height: 23.188vw;
     margin-left: 3%;
     box-shadow: #00000056 0px 0.781vw 15px;
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/462565985_547536854717544_1707302940158356610_n.png?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeGva18PIIrht1DCg5I4nX_YF7lX0o5HvO0XuVfSjke87RY5TuKrlm7d6Iq83vTY0ucIum-ahsPV7U2GzwZIV28B&_nc_ohc=bCLD-JrK0h8Q7kNvgEL7Frw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QF3YE0aiZ9hdbxHoKdG6Nng_0pcVQytNB5aP0t2VUrLNw&oe=677886D3");
-    cursor: pointer;
+    background-image: url("./RESOURCES/dogsleep2.jpg");
+	cursor: pointer;
 }
 
 .bannerbot3{
@@ -1003,8 +1003,8 @@ header {
     height: 23.188vw;
     margin-left: 3%;
     box-shadow: #00000056 0px 0.781vw 15px;
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/466524934_566124176128044_7805437211526884929_n.png?_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeEIFSyzu3OXv5ogKS0HPHdYA1qJsxZTciYDWomzFlNyJpFEWYAYZNzxNgXrjq6uGSw18XAOTCcuUH-PAE3KqUkB&_nc_ohc=TBBUE-BxK84Q7kNvgHnb5Va&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QESumEY9MWqMKwdRu615Ufr0ptGwYZbGQxalAQcPgTSgQ&oe=6778857C");
-    cursor: pointer;
+    background-image: url("./RESOURCES/dogsleep2.jpg");
+	cursor: pointer;
 }
 
 
@@ -1638,48 +1638,52 @@ header {
     }
     
     .Grooming-frontpic{
-        width: 22rem;
-        height: 22rem;
-        transform: translateX(0%);
-        
-        
-    }
-    
-    .textformat-grooming{
-        position: relative;
-        margin-top: -32%;
-        margin-left: 0;
-        line-height: 2cm;
-        font-family: "Instrument sans";
-        width: auto;
-    }
-    
-    .Grooming-banner-text{
-        color: #F8931D;
-        font-size: 64px;
-        width: auto;
-        font-family: "Instrument sans";
-        text-align: center;
-    }
-    
-    .Grooming-banner-text2{
-        font-size: 26px;
-        color: white;
-        font-weight: 600;
-        text-indent: 40px;
-        font-family: "Instrument sans";
-    }
-    
-    .Grooming-banner-text3{
-        width: auto;
-        font-size: 26px;
-        color: white;
-        font-weight: 600;
-        margin-left: 7%;
-        height: auto;
-        font-family: "Instrument sans";
-        align-self: center;
-    }
+    width: 35.172vw;
+    height: 35.172vw;
+}
+
+.textformat-grooming{
+    display: flex;
+    flex-direction: column;
+    width: 31.25vw;
+    line-height: 2cm;
+    font-family: "Instrument sans";
+    margin-left: 4rem;
+}
+
+.Grooming-banner-text{
+    color: #F8931D;
+    font-size: 64px;
+    width: 46.875vw;
+    font-family: "Instrument sans";
+}
+
+.bgdivColor{
+    background-color: #2F30951A;
+    width: 55vw;
+    height: auto;
+    border-radius: 3rem;
+   
+}
+.Grooming-banner-text2{
+    font-size: 26px;
+    color: rgb(59, 56, 56);
+    font-weight: 600;
+    text-indent: 40px;
+    font-family: "Instrument sans";
+    margin-top: 1vw ;
+}
+
+.Grooming-banner-text3{
+    width: 62.5vw;
+    font-size: 26px;
+    color: rgb(59, 56, 56);
+    font-weight: 600;
+    margin-left: 70px;
+    line-height: 1.25cm;
+    font-family: "Instrument sans";
+    margin-bottom: 1vw;
+}
     
     .banners{
         margin-top: 10%;
