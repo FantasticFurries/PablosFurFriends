@@ -373,21 +373,28 @@ header {
 }
 
 .hero{
-    z-index: -30;
-    height: 50.391vw;
-    background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/467481096_1643149339966257_4711032137361146964_n.png?stp=dst-png_s720x720&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeH5yjFaP3vCfa4ydh2gGEbN-nwLZFpHIcn6fAtkWkchyWkXTLG-TRp6ssUOamAr7pjQgEZcrFM2cHkpPEN5uPN8&_nc_ohc=pEq8_zVauNUQ7kNvgFqgYHG&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.xx&oh=03_Q7cD1QESt1haVlGHG2xcP3ph_2q9qdJj4TPwgyg1famwIUSqYg&oe=677241DD");
+  
+    width: 100%;
+    height: 40.391vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url("RESOURCES/picbg\ 1.png");
+    z-index: -1;
 }
+
 
 
 .ImageDog{
     width: 52.743vw;
-    height: 29.708vw;
+    height: 32.708vw;
+    margin-bottom: -2.65vw;
     
+
 }
 
 
 .catchphrase-hero{
-    position: relative;
+    /* position: relative; */
     padding-top: 10vw;
     margin-left: 10%;
     width: 44.531vw;
@@ -407,9 +414,6 @@ header {
     margin-top: 1.563vw;
 }
 
-.container-hero{
-    
-}
 
 .container2-hero{
     display: flex;
@@ -447,6 +451,8 @@ header {
 /*Features*/
 
 .Features{
+    display: flex;
+    justify-content: center;
     margin-top: 7%;
     width: 100%;
     align-items: center;
@@ -475,9 +481,9 @@ header {
     
 }
 
-.container2{
+/* .container2{
     margin-left: 8%;
-}
+} */
 
 .contain3{
     display: flex;
@@ -492,8 +498,8 @@ header {
     align-self: center;
     margin-left: 23px;
     margin-top: 0.781vw;
-    width: 7.813vw;
-    height: 7.813vw;
+    width: 6vw;
+    height: 6vw;
 }
 
 .featureimage1{
@@ -512,18 +518,23 @@ header {
 
 
 .FeatureName{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     height: 1.953vw;
     margin: auto;
-    background-color: #FF7B9B;
+    background-color: #ff7b9B
+    ;
+  
 }
 
 .FeatureName2{
     width: 90%;
-    height: 1.953vw;
     margin: auto;
     margin-top: -1.563vw;
     background-color: #FF7B9B;
+    
     
 }
 
@@ -534,6 +545,8 @@ header {
     line-height: 2.188vw;
     font-size: 1.094vw;
 }
+
+/* ------------------------------- */
 
 .FeaturedProducts{
     font-family: "Instrument Sans";
@@ -550,6 +563,8 @@ header {
     font-weight: 200;
     word-spacing: 4%;
 }
+
+
 
 .headd{
     margin-top: 10%;
@@ -584,6 +599,9 @@ header {
 }
 
 .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     max-width: 100%;
     justify-content: space-between;
@@ -614,7 +632,7 @@ header {
     border-radius: 1.563vw;
     margin-left: 5rem;
     box-shadow: #00000056 0px 0.781vw 15px;
-    height: 21.094vw;
+    height: auto;
     align-items: center;
     transition: 0.5s ease;
     vertical-align: baseline;
@@ -647,7 +665,6 @@ header {
     display: flex;
     width: 90%;
     cursor: pointer;
-    margin-left: 4.5rem;
     align-items: center;
     height: 22.656vw;
 }
@@ -656,13 +673,12 @@ header {
     display: flex;
     width: 90%;
     cursor: pointer;
-    margin-left: 4.5rem;
     align-items: center;
     height: 22.656vw;
 }
 
 .CarouselPics{
-    height: 13.281vw;
+    height: auto;
     margin-left: 1.563vw;
     width: 10.141vw;
 }
@@ -694,14 +710,15 @@ header {
     height: 27.344vw;
     background-color: #F8931D;
     display: flex;
-    flex-direction: row;
     align-content: center;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 #calltoactionimage{
-    
+    margin-right: -4.2vw;
+    height: auto;
+    width: 35vw;
 
 }
 
@@ -724,7 +741,7 @@ header {
 
 .calltoactiontextlayout{
     align-items: center;
-    margin-right: 0;
+    margin-left: 2vw;
     width: 57.594vw;
     
 }
