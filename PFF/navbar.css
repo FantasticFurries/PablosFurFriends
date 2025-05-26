@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /*montserrat font*/
+
+@font-face {
+    font-family: 'JumboSale';
+    src: url('./RESOURCES/JumboSale.woff2') format('opentype');
+}
+
+/*main format*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Helvetica;
+}
+
+body {
+    background-color: #faf7f7;
+}
+
+a {
+    text-decoration: none;
+    color: #6b6464;
+}
+
+/*loading screen*/
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; 
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+  
+#loading-image {
+    width: 20%;
+    max-width: 200px;
+    height: auto;
+}
+
+/*navbar*/
+.navbar {
+    background-color: rgb(250, 247, 247, 0.85);
+    padding: 10px 25px 10px 10px;
+    display: flex;
+    cursor: default;
+    align-items: center;
+    color: #6b6464;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header {
+    top: 0;
+    z-index: 1000;
+    position: sticky;
+}
+
+.navbar_title {
+	padding-right: 30px;
+    display: block;
+}
+
+.navbar_bizname {
+    font-family: 'JumboSale', sans-serif;
+    font-size: 1.9vw;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.pablo {
+    font-family: 'JumboSale', sans-serif;
+    color: #f88908;
+}
+
+.navbar_info {
+    font-size: 1vw;
+}
+
+.navbar_whole_logo {
+    align-items: center;
+    display: flex;
+}
+
+.menu_etc {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu {
+    margin-right: 30px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li {
+    min-width: 100px;
+}
+
+.menu ul li a {
+    transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #f88908;
+    transform: scale(1.5);
+}
+
+.menu a:hover {
+    font-weight: bold;
+}
+
+.account_btn {
+    gap: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.signup {
+    background-color: #fefbfb;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.su_dropdown {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    text-align: right;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #6b6464;
+    top: 100%;
+    right: 0;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+
+.account_btn:hover .su_dropdown {
+    display: block;
+}
+
+/*phone menu and sidebar*/
+.dim_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+  
+.dim_overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu_phone {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+    z-index: 500;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: #f88908;
+    color: white;
+    padding: 30px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    margin-top: 60px;
+
+    overflow: hidden;
+}
+
+.sidebar::before {
+    content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./RESOURCES/images/pattern_cat_white.png');
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+  
+.sidebar * {
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar_title {
+    text-align: center;
+    font-weight: 700;
+    padding: 30px 15px;
+    font-size: 1.5em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar li span {
+    font-size: 0.7em;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar_menu {
+    font-size: 1.8em;
+    display: flex;
+    flex-direction: column;
+    font-weight: 450;
+}
+
+.sidebar_menu img {
+    height: 1em;
+    width: auto;
+}
+
+.sidebar_menu1 li {
+    display: block;
+}
+
+.sidebar_divider {
+    width: 100%;
+    height: 1px;
+    display: none;
+    margin: 20px 0px;
+    opacity: 0.5;
+    background-color: white;
+}
+
+.dropdown_header img.drop_arrow {
+    width: 0.5em;
+    height: auto;
+    margin-left: auto;
+}
+
+.appointments_sidebar a span {
+    font-size: 0.5em;
+}
+
+.dropdown_toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.dropdown_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+}
+
+.dropdown_header img {
+    width: auto;
+    height: 1.1em;
+}
+
+.appointments_sidebar {
+    padding-left: 35px;
+    margin-top: 5px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.appointments_sidebar a {
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.appointments_sidebar a:hover {
+    text-decoration: underline;
+}
+
+/*responsive navbar*/
+@media screen and (max-width: 800px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar {
+        display: block;
+    }
+    .sidebar_divider {
+        display: flex;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px;
+        padding: 6px;
+    }
+    .navbar_logo {
+        height: 3em;
+        width: auto;
+    }
+    .navbar_title {
+        width: 100%;
+        padding-right: auto;
+    }
+    .navbar_bizname {
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    .navbar_info {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    .menu_etc {
+        width: auto;
+        gap: 0px;
+        padding-right: 10px;
+    }
+    .signup {
+        display: none;
+    }
+    .menu_phone {
+        width: 2em;
+        padding: 5px;
+        display: block;
+    }
+    .appointment_btn {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .appointment_btn img {
+        width: 8vw;
+        height: auto;
+        margin-left: 0;
+    }
+    .sidebar_divider {
+        display: block;
+    }
+}

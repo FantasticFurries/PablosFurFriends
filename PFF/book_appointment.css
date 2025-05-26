@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f88908;
+    background-image: url('./RESOURCES/images/pattern_paw2.png');
+    background-repeat: repeat;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 137, 8, 0.8);
+    z-index: -1;
+}
+
+a {
+    text-decoration: none;
+    color: #6b6464;
+}
+
+.appointment_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.16667vh 13.88889vw;
+}
+
+.appointment_h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 2.77778vh 0;
+}
+
+.appointment_subtext {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 70vw;
+    margin-bottom: 6.94444vh;
+}
+
+.make_an_appointment {
+    background-color: #F4F0EC;
+    padding: 0vh;
+    border-radius: 2.77778vh;
+    position: relative;
+    width: 95%;
+    box-shadow: 0px 0.55556vh 1.66667vh rgba(0, 0, 0, 0.1);
+}
+
+.appointment_box {
+    background-color: #F4F0EC;
+    border-radius: 2.77778vh;
+    padding: 1vh 1vw 2vh 1vw;
+    margin: 2.5vh;
+}
+
+.appointment_h2 {
+    font-size: 2em;
+    color: #f88908;
+    font-weight: bold;
+    margin-bottom: 2.77778vh;
+}
+
+.appointment_form_calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4vh;
+    margin-top: 2.77778vh;
+}
+
+.form_section {
+    flex: 1 1 41.67vh;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form_section input,
+.form_section select {
+    padding: 1.66667vh;
+    border: 0.27778vh solid #ccc;
+    border-radius: 1.38889vh;
+    font-size: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1vh;
+}
+
+.pet_details_group {
+    display: flex;
+    gap: 1.38889vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2vh;
+}
+
+.pet_details_group input {
+    flex: 1;
+}
+
+.form_section .pet_details_group input[type="number"],
+.form_section .pet_details_group input[type="text"] {
+    padding: 1.66667vh;
+    border: 0.27778vh solid #ccc;
+    border-radius: 1.38889vh;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form_buttons {
+    display: flex;
+    gap: 2.77778vh;
+    margin-top: 2.77778vh;
+}
+
+.cancel_btn {
+    background-color: white;
+    color: #6B6464;
+    border: 0.27778vh solid #ccc;
+    padding: 1.38889vh 2.77778vh;
+    border-radius: 1.11111vh;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.book_btn {
+    background-color: #f88908;
+    color: white;
+    padding: 1.38889vh 2.77778vh;
+    border: none;
+    border-radius: 1.11111vh;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.calendar_placeholder {
+    max-width: 100%;
+    box-sizing: border-box;
+    flex: 1 1 41.67vh;
+    background-color: white;
+    padding: 2.08vh;
+    border-radius: 2vh;
+    box-shadow: 0 0 1.39vh rgba(0, 0, 0, 0.1);
+    border: 0.13889vh solid #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6B6464;
+    font-size: 1.2em;
+}
+
+#prevMonth, #nextMonth {
+    font-size: 0.75em;
+    padding: 1vh 1.5vw;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    color: #6b6464;
+    transition: background-color 0.2s;
+}
+
+.calendar_placeholder #prevMonth:hover, #nextMonth:hover {
+    background-color: #f0f0f0;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
+.highlighted {
+    background-color: #f88908 !important;
+    color: white;
+    border-radius: 50%;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.27778vh;
+    margin-top: 1.38889vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#calendar div {
+    font-size: 1em;
+    border: 0.13889vh solid #ccc;
+    padding: 0.83333vh 0.55556vw;
+    text-align: center;
+    border-radius: 0.69444vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+#monthYear {
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0.69444vh;
+}
+
+#calendar div.selected {
+    background-color: #f88908 !important;
+    color: white;
+    font-weight: bold;
+}
+
+#calendar div.booked {
+    background-color: #f77 !important;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+#calendar div.empty {
+    border: none;
+    background: transparent;
+}
+
+#calendar > div:nth-child(-n+7) {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.55556vh;
+}
+
+@media screen and (max-width: 900px) {
+    .appointment_header {
+        padding: 3vh 0 0 0;
+    }
+
+    .appointment_h1 {
+        font-size: 2.2em;
+    }
+
+    .appointment_subtext {
+        font-size: 1.3em;
+        max-width: 80vw;
+        margin-bottom: 4vh;
+    }
+
+    .make_an_appointment {
+        padding: 1vh 1vw 1.5vh 1vw;
+        width: 97vw;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .appointment_box {
+        padding: 1vh 5vw 2vh;
+        margin: 0;
+        border-radius: 15px;
+    }
+
+    .appointment_h2 {
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 2.77778vh;
+    }
+
+    .appointment_form_calendar {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .form_section {
+        width: 100%;
+        flex-basis: auto;
+        gap: 2.5vh;
+    }
+
+    .form_section input,
+    .form_section select {
+        padding: 1.66667vh;
+        border: 0.27778vh solid #ccc;
+        border-radius: 1.38889vh;
+        font-size: 1em;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .pet_details_group {
+        display: flex;
+        flex-direction: column;
+        gap: 1.38889vh;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .pet_details_group input {
+        flex: 1;
+        min-width: unset;
+    }
+
+    .form_section .pet_details_group input[type="number"],
+    .form_section .pet_details_group input[type="text"] {
+        padding: 1.66667vh;
+        border: 0.27778vh solid #ccc;
+        border-radius: 1.38889vh;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+
+    .form_buttons {
+        flex-direction: column;
+        gap: 2vh;
+        margin-top: 2.77778vh;
+    }
+
+    .cancel_btn {
+        background-color: white;
+        color: #6B6464;
+        border: 0.27778vh solid #ccc;
+        padding: 1.38889vh 2.77778vh;
+        border-radius: 1.11111vh;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .book_btn {
+        background-color: #f88908;
+        color: white;
+        padding: 1.38889vh 2.77778vh;
+        border: none;
+        border-radius: 1.11111vh;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .calendar_placeholder {
+        padding: 2.5vh 3vw;
+        width: 100%;
+        flex-basis: auto;
+        border: 0.13889vh solid #E0E0E0;
+        border-radius: 2vh;
+        font-size: 1.1em;
+        box-sizing: border-box;
+    }
+
+    .required::after {
+        content: " *";
+        color: red;
+    }
+
+    #calendar {
+        font-size: 0.8em;
+        gap: 0.15vh;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        box-sizing: border-box;
+        padding: 0 1vw;
+    }
+
+    .calendar-day {
+        height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 0.7vh 0.4vw;
+        font-size: 0.9em;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vh 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .calendar-header button {
+        padding: 0.8vh 2.5vw;
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+
+    .calendar-header h3 {
+        font-size: 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
