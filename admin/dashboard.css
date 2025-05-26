@@ -1,0 +1,129 @@
+* {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: white !important;
+  text-decoration: none !important;
+  display: block;
+}
+
+a * {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.card {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  background-color: #444;
+}
+
+.green { background-color: #4CAF50; }
+.orange { background-color: #FFA500; }
+.blue { background-color: #2196F3; }
+.red { background-color: #f44336; }
+.gray { background-color: #444444; }
+.yellow { background-color: #d6bc28; }
+.violet { background-color: #2f2a8c; }
+
+.card-container, .card {
+  min-width: 0;
+}
+
+.card-content {
+  color: white;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.card-icon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-content p {
+  font-size: 15px;
+}
+
+.card-footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-footer button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0;
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.sidebar.collapsed {
+  width: 0px;
+}
+
+.main-content.expanded {
+  margin-left: 20px;
+}
+
+.sidebar.collapsed ul li {
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}

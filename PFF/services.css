@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /*montserrat font*/
+
+@font-face {
+    font-family: 'JumboSale';
+    src: url('../RESOURCES/JumboSale.woff2') format('opentype');
+}
+
+/*main format*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Helvetica;
+}
+
+body {
+    background-color: #faf7f7;
+}
+
+a {
+    text-decoration: none;
+    color: #6b6464;
+}
+
+/* ----------SECTION 1-------------------- */
+
+/* Section 1*/
+.section1{
+    height: auto;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.s1_container .services_Title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f88908;
+    padding: 5vh 0vh 5vh;
+}
+
+.services_image {
+    
+    background-image: url('./RESOURCES/images/Services_images/dogsleep.png');
+    background-size: cover;      
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 283px; 
+    
+    line-height: 0; 
+}
+
+.s1_container .services_Title{
+    text-align: center;
+}
+
+.s1_container .services_Title h1{
+   color: white;
+   font-size: 7vh;
+   font-weight: bold;
+}
+.s1_container .services_Title h3{
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+/* ----------SECTION 2-------------------- */
+
+.section2{
+    position: relative;
+    height: auto;
+    background-color: #ECE8E8;
+    max-width: 100%;
+    padding: 3em;
+    padding-inline: 7em;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./RESOURCES/images/Services_images/petboarding.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.1; /* Transparency */
+  transform: scale(1.3); /* Zoom out (if <1) or in (if >1) */
+  z-index: -1;
+  
+}
+
+.s2_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s2_titlediv{
+    background-color: #f88908;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2em;
+}
+
+.s2_gridwrap{
+    display: grid;
+    width: 90vw;
+    max-width: 75vw;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "box-1 box-1 box-2 box-2"
+    "box-1 box-1 box-3 box-3"
+    "box-4 box-4 box-4 box-4";
+    margin-inline: auto;
+    
+}
+
+.s2_gridwrap p, .s2_gridwrap ul{
+    color: #6B6464;
+    
+}
+.s2_gridwrap p{
+    text-align: center;
+}
+
+.s2_gridwrap h3{
+    
+    font-size: 2rem;
+}
+
+.pet_grid, .note, .inclusions {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* ----------SECTION 2-------------------- */
+
+/* section 3*/
+
+.section3{
+    position: relative;
+    height: auto;
+    background-color: #f88908;
+    max-width: 100%;
+    padding: 3em;
+    padding-inline: 7em;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.section3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./RESOURCES/images/Services_images/petgrooming.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.1; /* Transparency */
+  transform: scale(1); /* Zoom out (if <1) or in (if >1) */
+  z-index: -1;
+  
+}
+
+.s3_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s3_titlediv{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    color: #f88908;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+}
+
+.s3_gridwrap{
+    display: grid;
+    width: 90vw;
+    max-width: 75vw;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "box-1 box-1 box-3 box-3"
+    "box-2 box-2 box-3 box-3"
+    "box-4 box-5 box-5 box-5";
+    margin-inline: auto;
+    
+}
+.s3_gridwrap p{
+    text-align: center;
+}
+.s3_gridwrap h3{
+    color: #f88908;
+    font-size: 2rem;
+}
+
+
+.s3_gridwrap p, .s3_gridwrap ul{
+    color: #6B6464;
+}
+
+.note_div ul, .inclusions_div ul{
+    list-style-type: disc;    
+    margin-left: 1.5rem;    
+    padding-left: 1.5rem;  
+}
+
+/*grid testing */
+
+.pet_grid, .inclusions,.dog_groom,.note{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    height: auto;
+}
+.pet_grid p, .inclusions ul, .note ul{
+   font-size: 1rem;
+}
+
+.inclusions h3, .note h3{
+    margin-bottom: 0.3em;
+}
+
+.dog_groom{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.dog_groom img{
+    
+    /* min-width: 34.9375vw;
+    min-height: 28.5vw; */
+    /* min-width: 34.9375vw;
+    min-height: 28.5vw;
+    max-width: 100%;
+    height: auto; */
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: 50% 35%;
+    transition: transform 0.3s ease; /* Optional: for hover effects */
+}
+
+.pet_grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    
+}
+
+
+
+.s3_dogprice, .s3_catprice{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.pet_gridtop, .dog_span, .cat_span{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.3em;
+}
+
+.dog_span, .cat_span{
+    gap: 1em;
+}
+
+
+.dog_spandiv, .cat_spandiv{
+    background-color:#f88908;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    gap: 0.5rem;
+    
+}
+
+.dog_spanprice{
+    color: #6B6464;
+    border-radius: 10px;
+    border: 1px solid #f88908;
+    font-size: 1rem;
+    padding: 0.3em;
+    padding-inline: 0.8em;
+    
+}
+
+/* section 4*/
+.section4{
+    position: relative;
+    height: auto;
+    background-color: #ECE8E8;
+    max-width: 100%;
+    padding: 3em;
+    padding-inline: 7em;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.section4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./RESOURCES/images/Services_images/other.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.1; /* Transparency */
+  transform: scale(2.3); /* Zoom out (if <1) or in (if >1) */
+  z-index: -1;
+  
+}
+
+.s4_title, .s4_titlediv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s4_titlediv{
+    background-color: #f88908;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: fit-content;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2rem;
+}
+
+.s4_gridwrap{
+    display: grid;
+    grid-gap: 1.5em;
+    grid-auto-rows: auto;
+    grid-auto-columns: auto;
+    grid-template-areas: 
+    "box-1 box-2 box-5 box-5"
+    "box-3 box-4 box-5 box-5";
+    max-inline-size: 1200px;
+    margin-inline: auto;
+    
+}
+
+.small_grid, .big_grid{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    gap: 1em;
+}
+
+.sgrid_price, .bgrid_price{
+    color: #6B6464;
+    border-radius: 10px;
+    padding: 0.3em;
+    padding-inline: 1em;
+    border: 1px solid #f88908;
+
+}
+.sgrid_title{
+    background-color:#f88908;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1rem;
+}
+.bgrid_title{
+    background-color:#f88908;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 2rem;
+    gap: 1rem;
+    
+}
+
+.bgrid_promo{
+    color: #f88908;
+}
+.sgrid_price{
+    font-size: 1rem;
+}
+.bgrid_price{
+    font-size: 1rem;
+    text-align: center;
+}
+.bgridprice-1{
+    margin-bottom: 0.7em;
+}
+
+/*call to action*/
+.calltoaction {
+    height: fit-content;
+    background-color: #f88908;
+    padding: 50px 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2vw;
+}
+
+.cta_title {
+    color: white;
+    font-weight: bold;
+    font-size: 4vw;
+    max-width: 90%;
+    text-align: center;
+}
+
+.cta_desc {
+    color: white;
+    font-weight: 300;
+    font-size: 2vw;
+    max-width: 70%;
+    text-align: center;
+}
+
+.cta_button {
+    background-color: white;
+    padding: 20px 40px;
+    font-size: 2vw;
+    margin-top: 1vw;
+    border-radius: 10px;
+    font-weight: 700;
+    box-shadow: 3px 4px 7px rgb(0, 0, 0, 0.5);
+}
+
+.cta_button a {
+    color: #f88908;
+}
+
+@media screen and (max-width: 1024px) {
+    .dog_groom {
+        padding-top: 75%; /* Adjust aspect ratio for tablet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .pet_grid p, .note ul, .inclusions ul {
+        font-size: 0.9rem; /* Adjust text size for mobile */
+    }
+
+    .s2_gridwrap {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "box-1"
+            "box-2"
+            "box-3"
+            "box-4";
+    }
+    .dog_groom img{
+    width: 100%;
+    height: 100%;
+    }
+ 
+    .dog_groom{
+
+    padding-top: 30.25%; /* 16:9 aspect ratio */
+    }
+    .section2, .section3{
+        padding-inline: 0;
+    }
+    .s3_gridwrap {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "box-3"
+            "box-1"
+            "box-2"
+            "box-4"
+            "box-5";
+    }
+
+    .s4_gridwrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-3 box-4"
+        "box-5 box-5"
+        "box-5 box-5";
+    }
+    .s3_titlediv, .s2_titlediv , .s4_titlediv{
+        font-size: 1.5rem;
+    }
+    .s1_container .services_Title h1{
+        font-size: 3.5rem;
+    }
+    .s1_container .services_Title h3{
+        font-size: 1.5rem;
+    }
+    .s1_container .services_Title{
+    padding: 3vh 3vh 3vh;
+    }
+
+    .section4{
+        padding-inline: 5em;
+    }
+
+    .bgrid_title{
+        font-size: 1.3rem;
+    }
+    
+    .calltoaction {
+        padding: 3vh 1vw;
+    }
+
+    .cta_title {
+        font-size: 6vw;
+    }
+
+    .cta_desc {
+        font-size: 3vw;
+        margin: 5px 0;
+    }
+
+    .cta_button {
+        font-size: 4vw;
+        padding: 1vh 10vw;
+    }
+
+}
+@media screen and (max-width: 480px) {
+      .s3_titlediv, .s2_titlediv , .s4_titlediv{
+        font-size: 1rem;
+    }
+    .s1_container .services_Title h1{
+        font-size: 2.5rem;
+    }
+        .s1_container .services_Title h3{
+        font-size: 1rem;
+    }
+
+     .section4{
+        padding-inline: 2em;
+    }
+    .bgrid_title{
+        font-size: 1rem;
+    }
+
+}

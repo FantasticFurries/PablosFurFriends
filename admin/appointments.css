@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+a {
+    color: white !important;
+    text-decoration: none !important;
+    display: block;
+}
+
+a * {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+main.main-content {
+    margin-left: 15vw;
+    width: 85vw;
+    padding: 30px 2vw;
+    padding-top: 30px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #f4f4f4;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 0vw;
+    width: 100vw;
+}
+
+.main-content h2 {
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.dashboard-container {
+    margin-top: 2vh;
+    overflow-x: auto;
+}
+
+.breadcrumb {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+}
+
+.view-button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: #357ABD;
+}
+
+.admin-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.filter-btn.active {
+    background-color: #f88908;
+    color: white;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+th:nth-child(9), td:nth-child(9) {
+    width: 12vw;
+    min-width: 12vw;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+}
+
+td {
+    overflow: hidden;
+}
+tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    min-width: 6vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background-color: #f39c12;
+}
+
+.status-approved {
+    background-color: #28a745;
+}
+
+.status-cancelled {
+    background-color: #dc3545;
+}
+
+.status-completed {
+    background-color: #6c757d;
+}
+
+.options-cell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+}
+
+.action-button {
+   font-size: 1em;
+    padding: 8px 14px;
+    margin: 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+th:nth-child(9), td:nth-child(9) {
+    width: 18vw;
+    min-width: 18vw;
+}
+
+.action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.edit-btn, .approve-btn {
+    background-color: #28a745;
+}
+.edit-btn:hover, .approve-btn:hover {
+    background-color: #218838;
+}
+
+.reschedule-btn {
+    background-color: #4A90E2;
+}
+.reschedule-btn:hover {
+    background-color: #357ABD;
+}
+
+.cancel-btn, .delete-btn {
+    background-color: #dc3545;
+}
+.cancel-btn:hover, .delete-btn:hover {
+    background-color: #c82333;
+}
+
+.complete-btn {
+    background-color: #6c757d;
+}
+.complete-btn:hover {
+    background-color: #5a6268;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 8vh;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5vh auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    width: 90vw;
+    max-width: 60vw;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.modal-content form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.modal-content form input,
+.modal-content form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.modal-content form button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.modal-content form button:hover {
+    transform: translateY(-1px);
+}
+
+.modal-content form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+.modal-content form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.modal-content .cancel-edit-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+.modal-content .cancel-edit-btn:hover {
+    background-color: #bbb;
+}
+
+.close-button {
+    color: #aaa;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #777;
+}
